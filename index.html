@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV de Luis Aladro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A202C; /* Color de texto principal (gris muy oscuro) */
+            background-color: #FFFFFF; /* Color de fondo principal (blanco) */
+        }
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .expandable-content.expanded {
+            max-height: 2000px; /* Se ha aumentado el valor para que se vea todo el contenido */
+            transition: max-height 0.5s ease-in;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Encabezado sin imagen de fondo, con color sólido -->
+    <header class="bg-[#E9C985] rounded-b-[4rem] md:rounded-b-[8rem] relative z-20 overflow-hidden shadow-lg p-8 md:p-16">
+        <div class="flex items-center space-x-8 md:space-x-12">
+            <!-- Foto de perfil, más grande -->
+            <div class="flex-shrink-0 transform transition-transform duration-500 ease-in-out hover:scale-105">
+                <img src="Foto CV.jpg" alt="Fotografía de Luis Aladro" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover object-center shadow-xl border-4 border-white">
+            </div>
+
+            <!-- Cuadro de texto para nombre y rol -->
+            <div class="bg-white bg-opacity-30 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg border-2 border-[#C19900] transform transition-transform duration-500 ease-in-out hover:scale-105">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-2 tracking-wide drop-shadow-lg">Luis Aladro de Frutos</h1>
+                <p class="text-xl md:text-2xl font-semibold text-white drop-shadow-md">Marketing y Ventas</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8 py-12 -mt-16 md:-mt-24 relative z-20 max-w-4xl">
+
+        <!-- Sección de Contacto -->
+        <section class="bg-gray-100 rounded-xl p-6 md:p-8 shadow-lg mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div>
+                    <h3 class="text-sm md:text-base text-gray-600 font-bold">Móvil</h3>
+                    <p class="text-lg md:text-xl font-medium"><a href="tel:+34625631432" style="color: #FF0000">625 631 432 </a></p>
+                </div>
+                <div>
+                    <h3 class="text-sm md:text-base text-gray-600 font-bold">Correo Electrónico</h3>
+                    <p class="text-lg md:text-xl font-medium break-words"><a href="mailto:luis.aladro.f@gmail.com" style="color: #FF0000">luis.aladro.f@gmail.com</a></p>
+                </div>
+                <div>
+                    <h3 class="text-sm md:text-base text-gray-600 font-bold">Ubicación</h3>
+                    <p class="text-lg md:text-xl font-medium">Madrid (Las Tablas)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Habilidades (Abierta por defecto) -->
+        <section class="bg-white rounded-xl shadow-lg mb-8 p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#C19900]">Habilidades Clave</h2>
+            <ul class="list-disc list-inside space-y-2 text-base md:text-lg text-gray-700">
+                <li>Dirección de Ventas, liderazgo y gestión de equipos.</li>
+                <li>Desarrollo de negocio y estrategia comercial.</li>
+                <li>Gestión de marketing y transformación digital.</li>
+                <li>Análisis de mercado y negociación.</li>
+                <li>Gestión de conflictos.</li>
+                <li>Habilidades comerciales y don de gentes.</li>
+                <li>Conocimientos avanzados de informática, hardware y software.</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Experiencia -->
+        <section class="bg-white rounded-xl shadow-lg mb-8">
+            <button class="w-full text-left p-6 md:p-8 flex justify-between items-center" onclick="toggleContent('experience-content')">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#C19900]">Experiencia Laboral</h2>
+                <span id="experience-arrow" class="text-3xl transition-transform duration-300 transform rotate-0">&#9660;</span>
+            </button>
+            <div id="experience-content" class="expandable-content p-6 md:p-1">
+                <ul class="space-y-6">
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Desde abril de 2022 - Director de Marketing en Grupo Gil</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">SEAT, CUPRA y MAZDA | Presupuesto anual gestionado: ~300.000€</p>
+                        <p class="text-sm md:text-base text-gray-700">Funciones de dirección de marketing, y también como Comercial de Vehículos nuevos SEAT, gestionando ventas, financiaciones y renting.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Junio de 2018 a abril de 2022 - Director de Marketing de Grupo Gil</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Opel, Mazda, Seat, Cupra, Mitsubishi, MG, Das WeltAuto, Spoticar y OcasionGil.es | Presupuesto anual gestionado: >600.000€</p>
+                        <p class="text-sm md:text-base text-gray-700">Gestión de la transformación digital, desarrollo de planes de marketing, justificación de campañas, control de objetivos, desarrollo de webs y RRSS, coordinación de eventos y lanzamiento de nuevas marcas.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Enero de 2018 a junio de 2018 - Responsable de marketing y gestión de ventas en Mitsubishi Gil Automoción (Grupo Gil)</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Desarrollo y gestión de acciones de marketing, cumplimiento de estándares y justificación de campañas publicitarias.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Junio de 2014 a diciembre de 2017 - Responsable de publicidad en Grupo de Comunicación El Distrito</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Captación, seguimiento y mantenimiento de clientes, diseño de anuncios, desarrollo de campañas y negociación con agencias de medios.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Febrero 2012 a marzo de 2014 - Director de ventas y marketing en TUVISA, concesionario Opel</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Selección y control de equipo comercial, control de stock, responsable de flotas y tramitación de operaciones financieras.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Febrero de 2010 a enero de 2012 - Jefe de equipo en ENR Watio, S.L.</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Selección, formación y control de equipo comercial para la venta de productos energéticos.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Abril de 2009 a diciembre de 2009 - Asesor externo para Hoteles Hilton</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Proyecto de 8 meses para captación de colectivos y grandes cuentas para planes de incentivos.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Julio de 2008 a abril de 2009 - Director Comercial de Scratch Eventos Torneos y Ocio, S.L.</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Captación y mantenimiento de clientes, desarrollo de nuevos mercados, campañas comerciales, organización de eventos y gestión de patrocinios.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Febrero de 2007 a julio de 2008 - Director de Desarrollo y Grandes Cuentas de Dilab Sunglasses S.L.</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Mantenimiento y captación de grandes cuentas, desarrollo de nuevos mercados y gestión de ferias profesionales.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Junio de 2005 a febrero de 2007 - Director de Desarrollo de Prevensis Sistemas de Prevención y Gestión de Riesgos, S.L.</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Prospección, captación y mantenimiento de clientes y grandes cuentas, gestión de eventos y formaciones en conducción.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Enero de 2001 a mayo de 2005 - Responsable comercial de cuentas en agencias de comunicación</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Responsable de captación y mantenimiento de clientes y publicidad en revistas del sector industrial.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">Marzo de 1998 a mayo de 2002 - Formador freelance</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Impartición de cursos de ofimática, MS Office, internet y diseño de páginas web y Autocad.</p>
+                    </li>
+                    <li>
+                        <h3 class="text-xl md:text-2xl font-semibold text-gray-900">1986 a 2002 - Concesionario Renault por negocio familiar</h3>
+                        <p class="text-sm md:text-base text-gray-600 mb-2">Gestiones en diferentes campos del negocio: Ventas, Pedidos, Electrónica del automóvil, asistencia en carretera,etc.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección de Formación -->
+        <section class="bg-white rounded-xl shadow-lg mb-8">
+            <button class="w-full text-left p-6 md:p-8 flex justify-between items-center" onclick="toggleContent('education-content')">
+                <h2 class="text-2xl md:text-3xl font-bold text-[#C19900]">Formación</h2>
+                <span id="education-arrow" class="text-3xl transition-transform duration-300 transform rotate-0">&#9660;</span>
+            </button>
+            <div id="education-content" class="expandable-content p-6 md:p-1">
+                <ul class="list-disc list-inside space-y-4 text-base md:text-lg text-gray-700">
+                    <li>
+                        <span class="font-semibold">The Power MBA</span> (julio 2020 a febrero 2021)
+                    </li>
+                    <li>
+                        <span class="font-semibold">Ingeniería Técnica Industrial</span> (a falta de 5 asignaturas)
+                    </li>
+                    <li>
+                        <span class="font-semibold">Técnico Especialista en Electrónica Industrial (FPII)</span>
+                    </li>
+                    <li>
+                        <span class="font-semibold">Formación de iniciación a la Inteligencia Artificial</span> (15 horas, 2025)
+                    </li>
+                    <li>
+                        <span class="font-semibold">"Programa avanzado de transformación digital"</span> (90 horas, octubre 2020 a diciembre 2020)
+                    </li>
+                    <li>
+                        <span class="font-semibold">"Dirección de marketing y ventas" por el Instituto Europeo</span> (75 horas, enero 2020 a mayo 2020)
+                    </li>
+                    <li>
+                        <span class="font-semibold">Formador en conducción preventiva por Prevensis</span> (mayo 2005)
+                    </li>
+                    <li>
+                        <span class="font-semibold">Formador en conducción económica por el IDAE</span> (septiembre 2005)
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Sección de Idiomas -->
+        <section class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#C19900]">Idiomas</h2>
+            <ul class="list-disc list-inside space-y-2 text-base md:text-lg text-gray-700">
+                <li><span class="font-semibold">Inglés:</span> Hablado y escrito, nivel básico.</li>
+                <li><span class="font-semibold">Francés:</span> Hablado y escrito, nivel básico.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const arrow = document.getElementById(id.split('-')[0] + '-arrow');
+            const isExpanded = content.classList.contains('expanded');
+            
+            // Colapsa todos los elementos antes de expandir el actual
+            document.querySelectorAll('.expandable-content.expanded').forEach(item => {
+                if (item.id !== id) {
+                    item.classList.remove('expanded');
+                }
+            });
+            document.querySelectorAll('span[id$="-arrow"]').forEach(item => {
+                if (item.id !== arrow.id) {
+                    item.classList.remove('rotate-180');
+                }
+            });
+
+            // Expande o colapsa el elemento actual
+            if (isExpanded) {
+                content.classList.remove('expanded');
+                arrow.classList.remove('rotate-180');
+            } else {
+                content.classList.add('expanded');
+                arrow.classList.add('rotate-180');
+            }
+        }
+    </script>
+
+</body>
+</html>
